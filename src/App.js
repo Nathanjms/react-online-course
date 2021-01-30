@@ -7,10 +7,10 @@ function SecretComponent() {
 function RegularComponent() {
   return <h1>Everyone can see this component.</h1>
 }
-function App({ authorised }) {
+function App(props) {
   return (
     <>
-      {authorised ? <SecretComponent /> : <RegularComponent />}
+      {props.authorised ? <SecretComponent /> : <RegularComponent />}
     </>
   )
 
